@@ -7,21 +7,52 @@ body{
    display: flex;
    flex-direction: column;
    justify-content: center;
+   align-items: center;
    width: 100%;
    height: auto;
    background-color: #f8f0e3;
 }
 /* ==== Heading ==== */
-.trending-sign {
-
-}
-
 .header {
    display: flex;
    flex-direction: column;
    align-items: center;
+   width: 85%;
+}
+
+h1 {
+   color: #452813;
+   font-family: 'Noto Serif', serif;
+   font-size: 60px;
+   margin-bottom: 0em;
+}
+
+.search-bar {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   height: auto;
+}
+
+.search-bar img {
+   width: 12%;
+}
+
+form {
+   width: 100%;
+}
+
+#userInput {
    width: 80%;
-   /* border: 1px solid black; */
+   margin-left: 2em;
+   padding: .4em;
+   background-color: rgba(69,40,19,0.3);
+   border-radius: 25px;
+}
+
+#submitButton {
+   background-image: url(imgs/search-sharp-copy.svg);
 }
 
 .nav-bar {
@@ -30,17 +61,92 @@ body{
    justify-content: space-around;
 }
 
+/* === Container 2  === */
+.container2 {
+   width: 80%;
+   height: auto;
+}
+
+.book-images img {
+   width: 55%;
+}
+
+h4 {
+   color: #452813;
+   border-bottom: 1px solid lightgray;
+}
+
 /* ==== Carousel ==== */
 .carousel-container {
    display: flex;
+   justify-content: center;
+   margin-top: 1.5em;
+}
+
+.book-images {
+   display: flex;
+   justify-content: center;
+   width: 30%;
 }
 
 .carousel-container img {
    display: none;
+   align-self: center;
+   filter: drop-shadow(6px 5px 4px gray);
 }
 
 .book-images img:first-of-type {
    display: block;
+}
+
+.carousel-button {
+   display: flex;
+   align-items: center;
+   /* width:  */
+}
+
+/* ==== Search Area ==== */
+.searchedInfo {
+   width: 80%;
+   height: auto;
+   background-color: red;
+}
+
+h2 {
+   font-size: 32px;
+   margin-bottom: 0;
+}
+
+.book-info {
+   display: flex;
+   flex-direction: column;
+   width: 80%;
+   height: auto;
+   align-items: center;
+   border-bottom: 1px solid lightgray;
+}
+
+.authors {
+   display: flex;
+   align-items: center;
+   width: 16.5%;
+   justify-content: space-between;
+   margin: -0.5em 0 0 0;
+}
+
+.description {
+   display: flex;
+   flex-direction: column;
+   width: 80%;
+   height: auto;
+}
+
+.imageLink {
+   width: 25%;
+   /* box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); */
+   filter: drop-shadow(0 0 0.75rem gray);
+   margin-bottom: 2em;
+   border-bottom: 1px solid lightgray;
 }
 
 
@@ -55,14 +161,7 @@ body{
 }
 
 .socials img {
-   width: 1.5%;
-}
-
-/* ==== Search Page ==== */
-.book-info {
-   background-color: lightblue;
-   width: 50%;
-   height: 300px;
+   width: 5%;
 }
 
 /*  */

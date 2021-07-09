@@ -32,11 +32,12 @@ $('.previous').on('click', (event) => {
 // event listen/handler to the submit button
 $('form').on('submit', (event) => {
    event.preventDefault();
-
    // grab the value of the text from the input
    const userInput = $('#userInput').val()
    // this empties the input text
    $(event.currentTarget).trigger('reset')
+
+
 
 
    $.ajax({
@@ -51,7 +52,7 @@ $('form').on('submit', (event) => {
                .appendTo('.book-info')
                console.log(data);
 
-         const $authors = $('<h4>')
+         const $authors = $('<h3>')
                .addClass('authors')
                // .text('by')
                .text(data.items[0].volumeInfo.authors)
@@ -62,10 +63,23 @@ $('form').on('submit', (event) => {
                .text(data.items[0].volumeInfo.averageRating)
                .appendTo('.book-info')
 
-         const $imageLink = $('<img>').attr('src', data.items[0].volumeInfo.imageLinks.thumbnail)
+         const $imageLink = $('<img>')
+               .attr('src', data.items[0].volumeInfo.imageLinks.thumbnail)
                .addClass('imageLink')
-               // .text(data.items[0].volumeInfo.imageLinks.thumbnail)
                .appendTo('.book-info')
+
+         const $h4Description = $('<h4>')
+               .addClass('overview')
+               .text('Description')
+               .appendTo('.description')
+
+         const $description = $('<p>')
+               .text(data.items[0].volumeInfo.description)
+               .appendTo('.overview')
+
+         const $by = $('<p>')
+               .text('by')
+               .prependTo('.authors')
    },
       () => {
          console.log('bad request');
