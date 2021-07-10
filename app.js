@@ -46,40 +46,17 @@ $('form').on('submit', (event) => {
    }).then(
       (data) => {
          // console.log(data);
-         const $title = $('<h2>')
-               .addClass('title')
-               .text(data.items[0].volumeInfo.title)
-               .appendTo('.book-info')
-               console.log(data);
+         $('#bookTitle').html(data.items[0].volumeInfo.title);
+         $('#authors').html('by ' + data.items[0].volumeInfo.authors);
+         $('#imageLink').html(`<img src="${data.items[0].volumeInfo.imageLinks.thumbnail}" />`);
 
-         const $authors = $('<h3>')
-               .addClass('authors')
-               // .text('by')
-               .text(data.items[0].volumeInfo.authors)
-               .appendTo('.book-info')
+         // ==== book overview section ==== //
+         $('#overview').text('Overview');
+         $('#ratings').html('<b><u>Ratings</u>: </b> ' + data.items[0].volumeInfo.averageRating);
+         $('#genre').html('<b><u>Genre</u>: </b>' + data.items[0].volumeInfo.categories);
+         $('#description').html('<b><u>Description</u>: </b>' + '<br/>' + data.items[0].volumeInfo.description)
 
-         const $ratings = $('<h6>')
-               .addClass('ratings')
-               .text(data.items[0].volumeInfo.averageRating)
-               .appendTo('.book-info')
 
-         const $imageLink = $('<img>')
-               .attr('src', data.items[0].volumeInfo.imageLinks.thumbnail)
-               .addClass('imageLink')
-               .appendTo('.book-info')
-
-         const $h4Description = $('<h4>')
-               .addClass('overview')
-               .text('Description')
-               .appendTo('.description')
-
-         const $description = $('<p>')
-               .text(data.items[0].volumeInfo.description)
-               .appendTo('.overview')
-
-         const $by = $('<p>')
-               .text('by')
-               .prependTo('.authors')
    },
       () => {
          console.log('bad request');
