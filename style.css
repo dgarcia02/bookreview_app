@@ -10,20 +10,18 @@ body{
    align-items: center;
    width: 100%;
    height: auto;
-   background-color: #f8f0e3;
 }
+
 /* ==== Heading ==== */
 .header {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+   text-align: center;
    width: 85%;
 }
 
 h1 {
    color: #452813;
    font-family: 'Noto Serif', serif;
-   font-size: 60px;
+   font-size: 6vw;
    margin-bottom: 0em;
 }
 
@@ -43,28 +41,29 @@ form {
    width: 100%;
 }
 
+input:hover {
+   border: 2px solid #623500;
+}
+
 #userInput {
-   width: 80%;
-   margin-left: 2em;
-   padding: .4em;
+   width: 90%;
+   padding: .5em;
+   /* rgb with transparency */
    background-color: rgba(69,40,19,0.3);
    border-radius: 25px;
 }
 
-#submitButton {
-   background-image: url(imgs/search-sharp-copy.svg);
+button {
+   border: none;
+   background-color: #f8f0e3;
+   cursor: pointer;
 }
 
-.nav-bar {
-   display: flex;
-   width: 80%;
-   justify-content: space-around;
-}
 
 /* === Container 2  === */
 .container2 {
    width: 80%;
-   height: auto;
+   margin-bottom: 2em;
 }
 
 .book-images img {
@@ -80,6 +79,7 @@ h3, h4, #overview {
 .carousel-container {
    display: flex;
    justify-content: center;
+   width: 100%;
    margin: 1.5em 0 1.5em 0;
 }
 
@@ -106,12 +106,12 @@ h3, h4, #overview {
 
 /* ==== Search Area ==== */
 #bookTitle {
-   font-size: 32px;
+   font-size: 4vw;
    margin: auto;
 }
 
 #description, #genre, #ratings {
-   font-size: 14px;
+   font-size: 1.3vw;
    line-height: 1.5;
 }
 
@@ -121,6 +121,7 @@ h3, h4, #overview {
    width: 80%;
    height: auto;
    align-items: center;
+   margin: 0;
 }
 
 .overviewContent {
@@ -128,7 +129,7 @@ h3, h4, #overview {
 }
 
 #authors {
-   width: 17.5%;
+   font-size: 1.5vw;
    text-align: center;
    margin: 0.3em 0 0 0;
    border: none;
@@ -150,10 +151,14 @@ h3, h4, #overview {
 .footer {
    display: flex;
    flex-direction: column;
+   width: 80%;
 }
 
 .socials {
    display: flex;
+   justify-content: center;
+   width: 50%;
+   justify-content: space-between;
 }
 
 .socials img {

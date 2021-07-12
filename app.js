@@ -38,13 +38,12 @@ $('form').on('submit', (event) => {
    $(event.currentTarget).trigger('reset')
 
 
-
-
    $.ajax({
       url: "https://www.googleapis.com/books/v1/volumes?q=" + userInput,
       type: "GET",
    }).then(
       (data) => {
+
          // console.log(data);
          $('#bookTitle').html(data.items[0].volumeInfo.title);
          $('#authors').html('by ' + data.items[0].volumeInfo.authors);
@@ -56,13 +55,11 @@ $('form').on('submit', (event) => {
          $('#genre').html('<b><u>Genre</u>: </b>' + data.items[0].volumeInfo.categories);
          $('#description').html('<b><u>Description</u>: </b>' + '<br/>' + data.items[0].volumeInfo.description)
 
-
    },
       () => {
          console.log('bad request');
    }
    )
-
 
    })
 
