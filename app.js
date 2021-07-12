@@ -55,6 +55,14 @@ $('form').on('submit', (event) => {
          $('#genre').html('<b><u>Genre</u>: </b>' + data.items[0].volumeInfo.categories);
          $('#description').html('<b><u>Description</u>: </b>' + '<br/>' + data.items[0].volumeInfo.description)
 
+         // display any book randomly
+         // const randomPick = () => {
+         //    for (let i = 0; i <= array.length; i++) {
+         //       userInput = Math.random(data.items[0].volumeInfo.categories)
+         //    }
+         // }
+
+
    },
       () => {
          console.log('bad request');
