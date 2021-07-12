@@ -15,7 +15,7 @@ HTML, CSS, JavaSript, and jQuery
 **App Goal**
 The purpose of this app is to use the Google Books API to search for desired books and view its authors, book cover, ratings, and description.
 
-[Link](https://vigilant-wright-88877e.netlify.app)
+[Book Hooked App](https://vigilant-wright-88877e.netlify.app)
 
 
 **Unsolved Problems**
